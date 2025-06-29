@@ -1,91 +1,151 @@
 version: "3.1"
-
 nlu:
-- intent: greet
+- intent: falar_sobre_gacha_games
   examples: |
-    - hey
-    - hello
-    - hi
-    - hello there
-    - good morning
-    - good evening
-    - moin
-    - hey there
-    - let's go
-    - hey dude
-    - goodmorning
-    - goodevening
-    - good afternoon
+    - viram o novo gacha do [Honkai](jogo)?
+    - gacha de novo, Willian?
+    - gacha de novo, [Willian](pessoa)?
+    - gacha é um caminho sem volta
+    - o site pode ter uma seção de "builds" para personagens de gacha
+    - aqueles banners de gacha games
+    - [Genshin](jogo) ou [Honkai](jogo)
+    - o [Willian](pessoa) não para de falar de [Genshin](jogo)
+    - alguém já viu o novo banner do [Honkai Star Rail](jogo)?
+    - gacha é só sofrimento, mas a gente continua jogando
+    - preciso farmar mais gemas pro próximo personagem de [Genshin](jogo)
+    - esse sistema de pity no gacha me salva
+    - a sorte no gacha não tá do meu lado
 
-- intent: goodbye
+- intent: pedir_ajuda_programacao
   examples: |
-    - cu
-    - good by
-    - cee you later
-    - good night
-    - bye
-    - goodbye
-    - have a nice day
-    - see you around
-    - bye bye
-    - see you later
+    - tô com um bug no meu script Python aqui
+    - não consigo pegar os dados certos
+    - alguma ideia?
+    - tô com problema na API de web scraping
+    - preciso de ajuda com meu código
+    - [Deivid](pessoa), pode me dar uma luz nesse código em Python?
+    - meu script de web scraping com BeautifulSoup não tá funcionando
+    - alguém manja de FastAPI pra me ajudar com uma rota?
+    - tô com um erro de CORS no meu front-end com JS
+    - não consigo resolver esse bug de jeito nenhum
+    - preciso de ajuda pra otimizar uma query no banco de dados
 
-- intent: affirm
+- intent: falar_sobre_linguagem_programacao
   examples: |
-    - yes
-    - y
-    - indeed
-    - of course
-    - that sounds good
-    - correct
+    - tá usando qual biblioteca?
+    - Rust pra game dev
+    - Rust é animal
+    - sou mais do front-end
+    - meu cérebro ainda tá preso no Python e no JavaScript
+    - JS é vida
+    - dá uma olhada em Rust
+    - umas bibliotecas de machine learning em Python
+    - backend podia ser em FastAPI
+    - programar
+    - o [Felipe](pessoa) tava falando que Rust é o futuro
+    - entre Python e JS, qual vocês preferem para backend?
+    - FastAPI é muito mais rápido que Flask, na minha opinião
+    - tô pensando em aprender Go, dizem que é bom pra concorrência
+    - JavaScript no backend com Node.js é uma boa
+    - ainda prefiro a simplicidade do Python para data science
 
-- intent: deny
+- intent: falar_sobre_anime
   examples: |
-    - no
-    - n
-    - never
-    - I don't think so
-    - don't like that
-    - no way
-    - not really
+    - assistiram o último episódio de Jujutsu Kaisen?
+    - a animação tá insana!
+    - Jujutsu tá absurdo
+    - queria ter tempo pra desenhar meus próprios animes
+    - sistema de recomendação de animes
+    - a nova temporada de Attack on Titan tá vindo aí
+    - alguém aqui lê o mangá de One Piece?
+    - o que vocês acharam do final de Code Geass?
+    - aquela cena de luta em Demon Slayer foi incrível
+    - acho que vou maratonar um isekai esse fim de semana
 
-- intent: mood_great
+- intent: falar_sobre_design
   examples: |
-    - perfect
-    - great
-    - amazing
-    - feeling like a king
-    - wonderful
-    - I am feeling very good
-    - I am great
-    - I am amazing
-    - I am going to save the world
-    - super stoked
-    - extremely good
-    - so so perfect
-    - so good
-    - so perfect
+    - um projeto de design para um site
+    - ideia de funcionalidade legal?
+    - aprender mais sobre programação e design
+    - a animação de Jujutsu tá roubando a cena
+    - o [Deivid](pessoa) manja muito de Figma
+    - precisamos pensar na experiência do usuário (UX) para esse app
+    - qual paleta de cores vocês acham que combina com o site?
+    - a interface (UI) precisa ser mais limpa
+    - vamos usar o design system que o [Felipe](pessoa) criou
 
-- intent: mood_unhappy
+- intent: falar_sobre_concordar_ou_afirmar
   examples: |
-    - my day was horrible
-    - I am sad
-    - I don't feel very well
-    - I am disappointed
-    - super sad
-    - I'm so sad
-    - sad
-    - very sad
-    - unhappy
-    - not good
-    - not very good
-    - extremly sad
-    - so saad
-    - so sad
+    - É nóis!
+    - É nóis na fita!
+    - Com certeza!
+    - Boa ideia!
+    - Boa!
+    - Concordo!
+    - Sim!
+    - Pode crer!
+    - Fechou!
+    - É isso mesmo!
+    - Tamo junto!
+    - Demorou!
+    - Exatamente!
 
-- intent: bot_challenge
+- intent: cumprimentar
   examples: |
-    - are you a bot?
-    - are you a human?
-    - am I talking to a bot?
-    - am I talking to a human?
+    - E aí, galera?
+    - Olá, pessoal!
+    - Fala, time!
+    - E aí, pessoal?
+    - Salve, galera!
+    - Opa, bão?
+    - E aí, gente!
+    - Bom dia, pessoal!
+    - Como vão?
+
+- intent: despedir
+  examples: |
+    - Fui nessa!
+    - Até mais!
+    - Tenho que ir!
+    - Falou!
+    - Vou nessa, galera!
+    - Abraços!
+    - A gente se fala!
+    - Tchau!
+    - Preciso sair agora, falou!
+
+# Exemplo de uma entidade para o Rasa
+# Entidades são informações que o bot precisa extrair, como nomes de jogos ou pessoas
+- intent: falar_sobre_jogo_especifico
+  examples: |
+    - meu [CS2](jogo) tá me dando dor de cabeça ultimamente
+    - não aguento mais [CS2](jogo)
+    - no [CS](jogo) é só frustração
+    - quem topa umas ranqueadas de [Valorant](jogo) mais tarde?
+    - bora de [Valo](jogo)?
+    - alguém pra [Valorant](jogo) agora?
+    - vamos jogar [Valorant](jogo)?
+    - quiz diário de [CS2](jogo)
+    - mapa interativo com os pontos de bombsite do [Valorant](jogo)
+    - o [Felipe](pessoa) me carregou no [Valorant](jogo) ontem
+    - alguém anima um [CS](jogo) mais tarde?
+    - esse novo agente do [Valorant](jogo) tá quebrado
+    - tô preso no mesmo elo do [CS2](jogo) faz semanas
+    - a mira do [Deivid](pessoa) no [Valorant](jogo) é absurda
+
+- intent: referenciar_alguem
+  examples: |
+    - [Felipe](pessoa) ontem eu tava off
+    - [Willian](pessoa), gacha é um caminho sem volta
+    - [Deivid](pessoa), vê se não é algum problema
+    - [Felipe](pessoa), Rust parece legal
+    - [Deivid](pessoa), você me conhece bem demais!
+    - O que o [Felipe](pessoa) acha?
+    - E você, [Willian](pessoa)?
+    - Pergunta pro [Deivid](pessoa).
+    - isso é a cara do [Willian](pessoa) falando
+    - chama o [Deivid](pessoa) que ele resolve isso
+    - o [Felipe](pessoa) manja muito de infra
+    - vi o que o [Willian](pessoa) postou sobre gacha
+    - o [Deivid](pessoa) tava falando sobre isso ontem
+    - o [Felipe](pessoa) com certeza vai gostar dessa ideia

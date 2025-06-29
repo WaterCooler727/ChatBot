@@ -8,7 +8,7 @@ assistant_id: 20250626-230932-plastic-fractal
 
 # Configuration for Rasa NLU.
 # https://rasa.com/docs/rasa/nlu/components/
-language: en
+language: pt
 
 pipeline:
 # No configuration for the NLU pipeline was provided. The following default pipeline was used to train your model.

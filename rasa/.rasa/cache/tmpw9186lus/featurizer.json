@@ -1,0 +1,56 @@
+{
+  "type": "IntentMaxHistoryTrackerFeaturizer",
+  "state_featurizer": {
+    "action_texts": [],
+    "entity_tag_specs": [],
+    "feature_states": {
+      "intent": {
+        "back": 0,
+        "cumprimentar": 1,
+        "despedir": 2,
+        "falar_sobre_anime": 3,
+        "falar_sobre_concordar_ou_afirmar": 4,
+        "falar_sobre_design": 5,
+        "falar_sobre_gacha_games": 6,
+        "falar_sobre_jogo_especifico": 7,
+        "falar_sobre_linguagem_programacao": 8,
+        "nlu_fallback": 9,
+        "out_of_scope": 10,
+        "pedir_ajuda_programacao": 11,
+        "referenciar_alguem": 12,
+        "restart": 13,
+        "session_start": 14
+      },
+      "action_name": {
+        "action_listen": 0,
+        "action_restart": 1,
+        "action_session_start": 2,
+        "action_default_fallback": 3,
+        "action_deactivate_loop": 4,
+        "action_revert_fallback_events": 5,
+        "action_default_ask_affirmation": 6,
+        "action_default_ask_rephrase": 7,
+        "action_two_stage_fallback": 8,
+        "action_unlikely_intent": 9,
+        "action_back": 10,
+        "...": 11,
+        "action_extract_slots": 12,
+        "utter_afirmar": 13,
+        "utter_ajuda_programacao": 14,
+        "utter_cumprimentar": 15,
+        "utter_default": 16,
+        "utter_despedir": 17,
+        "utter_responder_jogo_especifico": 18,
+        "utter_responder_referencia_pessoa": 19
+      },
+      "entities": {
+        "jogo": 0,
+        "pessoa": 1
+      },
+      "slots": {},
+      "active_loop": {}
+    }
+  },
+  "remove_duplicates": true,
+  "max_history": 5
+}

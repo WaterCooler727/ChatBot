@@ -1,33 +1,157 @@
 version: "3.1"
 
 intents:
-  - greet
-  - goodbye
-  - affirm
-  - deny
-  - mood_great
-  - mood_unhappy
-  - bot_challenge
+  - falar_sobre_gacha_games
+  - pedir_ajuda_programacao
+  - falar_sobre_linguagem_programacao
+  - falar_sobre_anime
+  - falar_sobre_design
+  - falar_sobre_concordar_ou_afirmar
+  - cumprimentar
+  - despedir
+  - falar_sobre_jogo_especifico
+  - referenciar_alguem
+
+entities:
+  - jogo
+  - pessoa
+
+slots:
+  jogo:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: jogo
+  pessoa:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: pessoa
 
 responses:
-  utter_greet:
-  - text: "Hey! How are you?"
+  utter_cumprimentar:
+  - text: "E aí! Tudo certo?"
+  - text: "Oi! Como você tá?"
+  - text: "Fala, galera! Tudo tranquilo?"
+  - text: "E aí, pessoal! Como estão as coisas?"
+  - text: "Opa, e aí! Beleza?"
+  - text: "Salve! Tudo em ordem?"
+  - text: "E aí, time! Prontos pra hoje?"
+  - text: "Olá! Que bom ver vocês."
+  - text: "Fala, pessoal! Como foi o dia?"
+  - text: "Oi, gente! Tudo na paz?"
+  - text: "E aí! Novidades?"
+  - text: "Olá a todos! Começando os trabalhos?"
+  - text: "Fala, dev! Tudo certo por aí?"
+  - text: "E aí, como vai a força?"
 
-  utter_cheer_up:
-  - text: "Here is something to cheer you up:"
-    image: "https://i.imgur.com/nGF1K8f.jpg"
+  utter_despedir:
+  - text: "Falou! Até mais."
+  - text: "Até a próxima!"
+  - text: "Fui! A gente se fala."
+  - text: "Até logo!"
+  - text: "A gente se vê!"
+  - text: "Tchau, tchau!"
+  - text: "Vou nessa, pessoal. Falou!"
+  - text: "Tenham um bom dia!"
+  - text: "Abraço!"
+  - text: "Até mais ver."
+  - text: "Me retiro por agora. Até!"
+  - text: "Preciso ir. A gente se fala depois."
+  - text: "Té mais!"
 
-  utter_did_that_help:
-  - text: "Did that help you?"
+  utter_afirmar:
+  - text: "Boa! Combinado."
+  - text: "Com certeza!"
+  - text: "É isso aí!"
+  - text: "Fechado!"
+  - text: "Pode crer!"
+  - text: "Exato!"
+  - text: "Isso mesmo."
+  - text: "Concordo plenamente."
+  - text: "Sem dúvida."
+  - text: "Demorou!"
+  - text: "Perfeito."
+  - text: "Manda bala!"
+  - text: "Tamo junto!"
 
-  utter_happy:
-  - text: "Great, carry on!"
+  utter_ajuda_programacao:
+  - text: "Claro, manda a dúvida aí que a gente tenta resolver junto."
+  - text: "Opa, manda a ver. No que posso ajudar com o código?"
+  - text: "Com certeza. Me mostra o problema que a gente resolve."
+  - text: "Pode falar, qual é o B.O. no código?"
+  - text: "Bora debugar isso aí. Qual a sua dúvida?"
+  - text: "Estou aqui pra isso. Me explica o que tá pegando."
+  - text: "Vamos resolver esse bug. Manda o trecho do código."
+  - text: "Ajudo sim! O que o terminal tá dizendo?"
+  - text: "Pode mandar a pergunta. Vamos olhar juntos."
+  - text: "Sem problemas, me fala qual a dificuldade."
+  - text: "Claro, me dá um contexto do problema de programação."
+  - text: "Vamos lá, duas cabeças pensam melhor que uma. Qual é a questão?"
+  - text: "Opa, adoro um desafio de código. Manda aí!"
 
-  utter_goodbye:
-  - text: "Bye"
+  utter_responder_jogo_especifico:
+  - text: "Ah, {jogo}? É um ótimo jogo, mas às vezes dá uma raiva mesmo."
+  - text: "Falar de {jogo} é comigo mesmo! O que manda?"
+  - text: "{jogo}, hein? Jogaço! O que tem pra hoje?"
+  - text: "Eita, {jogo}... esse aí testa a paciência, mas é bom demais."
+  - text: "Bora falar de {jogo}! Qual a boa?"
+  - text: "Ah, {jogo}... passei muita raiva e me diverti muito com ele."
+  - text: "Opa, {jogo} na área! O que aconteceu?"
+  - text: "Se o assunto é {jogo}, tô dentro. Manda a ver."
+  - text: "Hmm, {jogo}. Faz tempo que não jogo, mas lembro bem."
+  - text: "Adoro {jogo}! Quer montar uma equipe?"
+  - text: "{jogo} é um clássico (ou vai ser). O que você acha dele?"
+  - text: "Falou em {jogo}, meus ouvidos até apitaram. O que foi?"
 
-  utter_iamabot:
-  - text: "I am a bot, powered by Rasa."
+  utter_responder_referencia_pessoa:
+  - text: "O que tem o/a {pessoa}?"
+  - text: "O {pessoa} é fera, né? Sempre trazendo boas ideias."
+  - text: "O {pessoa} é sempre uma boa referência, né? O que você acha dele(a)?"
+  - text: "Falando no(a) {pessoa}, o que ele(a) aprontou dessa vez?"
+  - text: "Ah, o(a) {pessoa}! O que ele(a) disse?"
+  - text: "O que o(a) {pessoa} tem a ver com isso? Me conta."
+  - text: "Hmm, {pessoa}... figura conhecida. O que manda?"
+  - text: "O(A) {pessoa} sempre aparece nessas conversas, né? O que foi?"
+  - text: "Mencionou o(a) {pessoa}, fiquei curioso. Qual a fofoca?"
+  - text: "Sim, o que tem o(a) {pessoa}?"
+  - text: "O(A) {pessoa} é uma figura. O que ele(a) fez?"
+  - text: "Ah, o(a) {pessoa}... sempre com um ponto de vista interessante. O que ele(a) falou?"
+  - text: "O que nosso amigo(a) {pessoa} anda fazendo?"
+
+  utter_falar_sobre_gacha_games:
+  - text: "Banners de gacha games são sempre uma roleta russa, né? Mas é divertido!"
+  - text: "Gacha games são legais, mas às vezes dá uma frustração quando não vem o personagem que a gente quer."
+  - text: "Ah, gacha... o vício que a gente ama odiar."
+  - text: "Aquele sentimento quando você gasta tudo e não vem nada... quem nunca?"
+  - text: "Gacha é perigoso pra carteira, mas a gente gosta."
+  - text: "Qual o gacha do momento pra você?"
+  - text: "A sorte nos banners de gacha anda como?"
+  - text: "É cada sistema de gacha que inventam que só por Deus."
+  - text: "Gacha é a prova de que a esperança é a última que morre."
+  - text: "Você também fica calculando as chances de drop no gacha?"
+  - text: "Aquele 'roll' de 10 tiros no gacha é pura adrenalina."
+  - text: "Cuidado com o gacha, é um caminho sem volta mesmo!"
+
+  utter_default:
+  - text: "Não entendi muito bem, pode repetir?"
+  - text: "Desculpe, não consegui pegar isso. Pode falar de novo?"
+  - text: "Humm, não sei se entendi. Pode repetir?"
+  - text: "Desculpe, não consegui entender. Pode explicar de novo?"
+  - text: "Opa, essa parte eu não peguei. Pode me dizer de outra forma?"
+  - text: "Acho que me perdi. Você pode reformular, por favor?"
+  - text: "Não processei essa informação. Tenta de novo?"
+  - text: "Minhas sinapses não conectaram aqui. Pode repetir?"
+  - text: "Desculpe, meu processador de linguagem natural deu uma engasgada. Pode falar de novo?"
+  - text: "Pode explicar isso com outras palavras?"
+  - text: "Não tenho certeza se entendi o que você quis dizer."
+  - text: "Hmm, isso foi um pouco complexo pra mim. Pode simplificar?"
+  - text: "Acho que preciso de mais café. Pode repetir, por favor?"
+  - text: "Não captei a mensagem. Tenta de novo, por favor."
+
+
 
 session_config:
   session_expiration_time: 60

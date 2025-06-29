@@ -1,0 +1,21 @@
+{
+  "0": "affirm",
+  "1": "bot_challenge",
+  "2": "cumprimentar",
+  "3": "deny",
+  "4": "despedir",
+  "5": "falar_sobre_anime",
+  "6": "falar_sobre_concordar_ou_afirmar",
+  "7": "falar_sobre_design",
+  "8": "falar_sobre_gacha_games",
+  "9": "falar_sobre_jogo_especifico",
+  "10": "falar_sobre_linguagem_programacao",
+  "11": "goodbye",
+  "12": "greet",
+  "13": "mood_great",
+  "14": "mood_unhappy",
+  "15": "pedir_ajuda_programacao",
+  "16": "perguntar_jogar_valorant",
+  "17": "reclamar_cs",
+  "18": "referenciar_alguem"
+}
